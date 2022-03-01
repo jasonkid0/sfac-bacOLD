@@ -177,7 +177,7 @@ $pdf->SetFont('Arial','B',10);
 $pdf->Cell(100,5,"Name",1,0);
 $pdf->Cell(50,5,"Course",1,0);
 $pdf->Cell(46,5,"Year Level",1,1);
-$pdf->Cell(46,5,"EMAIL",1,1);
+//$pdf->Cell(46,5,"EMAIL",1,1);
 $pdf->SetFont('Arial','',9);
 $x = 1;
 $query = mysqli_query($db, "SELECT *,CONCAT(tbl_students.lastname, ', ', tbl_students.firstname, ' ', tbl_students.middlename)  as fullname FROM tbl_schoolyears 
@@ -204,7 +204,7 @@ $pdf->SetFont('Arial','B',10);
 $pdf->Cell(100,5,"Name",1,0);
 $pdf->Cell(50,5,"Course",1,0);
 $pdf->Cell(46,5,"Year Level",1,1);
-$pdf->Cell(46,5,"EMAIL",1,1);
+//$pdf->Cell(46,5,"EMAIL",1,1);
 $pdf->SetFont('Arial','',9);
             }
 }
