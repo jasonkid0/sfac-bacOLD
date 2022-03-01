@@ -91,7 +91,7 @@ $query = mysqli_query($db, "SELECT *,CONCAT(tbl_students.lastname, ', ', tbl_stu
                                   LEFT JOIN tbl_genders ON tbl_genders.gender_id = tbl_students.gender_id
                                   LEFT JOIN tbl_courses ON tbl_courses.course_id = tbl_schoolyears.course_id
                                   LEFT JOIN tbl_year_levels ON tbl_year_levels.year_id = tbl_schoolyears.year_id
-                                  where ay_id = '$_SESSION[active_acad]' and tbl_courses.department_id='3' and sem_id = '$_SESSION[active_sem]' and remark= 'Approved' ORDER BY  lastname") or die(mysqli_error($db));
+                                  where ay_id = '$_SESSION[active_acad]' and tbl_courses.department_id='3' and sem_id = '$_SESSION[active_sem]' and remark= 'Approved' ORDER BY tbl_courses.course, tbl_schoolyears.year_id, lastname") or die(mysqli_error($db));
                                 while ($row= mysqli_fetch_array ($query))
 {   
     $pdf->Cell(6,5,$x,0,0);
@@ -118,7 +118,7 @@ $query = mysqli_query($db, "SELECT *,CONCAT(tbl_students.lastname, ', ', tbl_stu
                                   LEFT JOIN tbl_genders ON tbl_genders.gender_id = tbl_students.gender_id
                                   LEFT JOIN tbl_courses ON tbl_courses.course_id = tbl_schoolyears.course_id
                                   LEFT JOIN tbl_year_levels ON tbl_year_levels.year_id = tbl_schoolyears.year_id
-                                  where ay_id = '$_SESSION[active_acad]' and tbl_courses.department_id='6' and sem_id = '$_SESSION[active_sem]' and remark= 'Approved' ORDER BY fullname") or die(mysqli_error($db));
+                                  where ay_id = '$_SESSION[active_acad]' and tbl_courses.department_id='6' and sem_id = '$_SESSION[active_sem]' and remark= 'Approved' ORDER BY tbl_courses.course, tbl_schoolyears.year_id, lastname") or die(mysqli_error($db));
                                 while ($row= mysqli_fetch_array ($query))
 {   
     $pdf->Cell(6,5,$x,0,0);
@@ -158,7 +158,7 @@ $query = mysqli_query($db, "SELECT *,CONCAT(tbl_students.lastname, ', ', tbl_stu
                                   LEFT JOIN tbl_genders ON tbl_genders.gender_id = tbl_students.gender_id
                                   LEFT JOIN tbl_courses ON tbl_courses.course_id = tbl_schoolyears.course_id
                                   LEFT JOIN tbl_year_levels ON tbl_year_levels.year_id = tbl_schoolyears.year_id
-                                  where ay_id = '$_SESSION[active_acad]' and tbl_courses.department_id='5' and sem_id = '$_SESSION[active_sem]' and remark= 'Approved' ORDER BY lastname ") or die(mysqli_error($db));
+                                  where ay_id = '$_SESSION[active_acad]' and tbl_courses.department_id='5' and sem_id = '$_SESSION[active_sem]' and remark= 'Approved' ORDER BY tbl_courses.course, tbl_schoolyears.year_id, lastname ") or die(mysqli_error($db));
                                 while ($row= mysqli_fetch_array ($query))
 {   
     $pdf->Cell(6,5,$x,0,0);
@@ -185,7 +185,7 @@ $query = mysqli_query($db, "SELECT *,CONCAT(tbl_students.lastname, ', ', tbl_stu
                                   LEFT JOIN tbl_genders ON tbl_genders.gender_id = tbl_students.gender_id
                                   LEFT JOIN tbl_courses ON tbl_courses.course_id = tbl_schoolyears.course_id
                                   LEFT JOIN tbl_year_levels ON tbl_year_levels.year_id = tbl_schoolyears.year_id
-                                  where ay_id = '$_SESSION[active_acad]' and tbl_courses.department_id='4' and sem_id = '$_SESSION[active_sem]' and remark= 'Approved' ORDER BY lastname ") or die(mysqli_error($db));
+                                  where ay_id = '$_SESSION[active_acad]' and tbl_courses.department_id='4' and sem_id = '$_SESSION[active_sem]' and remark= 'Approved' ORDER BY tbl_courses.course, tbl_schoolyears.year_id, lastname ") or die(mysqli_error($db));
                                 while ($row= mysqli_fetch_array ($query))
 {   
     $pdf->Cell(6,5,$x,0,0);
